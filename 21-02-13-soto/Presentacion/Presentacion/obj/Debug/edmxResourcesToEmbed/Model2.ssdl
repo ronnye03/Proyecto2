@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDapIIFebrero2013Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="dbDapIIFebrero2013Model1StoreContainer">
+    <EntitySet Name="caja" EntityType="dbDapIIFebrero2013Model1.Store.caja" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cargo" EntityType="dbDapIIFebrero2013Model1.Store.cargo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="categoria" EntityType="dbDapIIFebrero2013Model1.Store.categoria" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cliente" EntityType="dbDapIIFebrero2013Model1.Store.cliente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="credito" EntityType="dbDapIIFebrero2013Model1.Store.credito" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cuota" EntityType="dbDapIIFebrero2013Model1.Store.cuota" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="detalle_pedido" EntityType="dbDapIIFebrero2013Model1.Store.detalle_pedido" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="empleado" EntityType="dbDapIIFebrero2013Model1.Store.empleado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="juridico" EntityType="dbDapIIFebrero2013Model1.Store.juridico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="natural" EntityType="dbDapIIFebrero2013Model1.Store.natural" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pedido_cliente" EntityType="dbDapIIFebrero2013Model1.Store.pedido_cliente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="producto" EntityType="dbDapIIFebrero2013Model1.Store.producto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rubro" EntityType="dbDapIIFebrero2013Model1.Store.rubro" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="subcategoria" EntityType="dbDapIIFebrero2013Model1.Store.subcategoria" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="transaccion" EntityType="dbDapIIFebrero2013Model1.Store.transaccion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="v_ClienteNatural" EntityType="dbDapIIFebrero2013Model1.Store.v_ClienteNatural" store:Type="Views" store:Schema="dbo" store:Name="v_ClienteNatural">
+      <DefiningQuery>SELECT 
+      [v_ClienteNatural].[idrubro] AS [idrubro], 
+      [v_ClienteNatural].[nombre_rubro] AS [nombre_rubro], 
+      [v_ClienteNatural].[idcliente] AS [idcliente], 
+      [v_ClienteNatural].[direccion] AS [direccion], 
+      [v_ClienteNatural].[telefono] AS [telefono], 
+      [v_ClienteNatural].[nit] AS [nit], 
+      [v_ClienteNatural].[nombre_cliente] AS [nombre_cliente], 
+      [v_ClienteNatural].[app] AS [app], 
+      [v_ClienteNatural].[apm] AS [apm], 
+      [v_ClienteNatural].[fecha_nacimiento] AS [fecha_nacimiento]
+      FROM [dbo].[v_ClienteNatural] AS [v_ClienteNatural]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_generalCliente" EntityType="dbDapIIFebrero2013Model1.Store.V_generalCliente" store:Type="Views" store:Schema="dbo" store:Name="V_generalCliente">
+      <DefiningQuery>SELECT 
+      [V_generalCliente].[idrubro] AS [idrubro], 
+      [V_generalCliente].[nombre_rubro] AS [nombre_rubro], 
+      [V_generalCliente].[idcliente] AS [idcliente], 
+      [V_generalCliente].[direccion] AS [direccion], 
+      [V_generalCliente].[telefono] AS [telefono], 
+      [V_generalCliente].[nit] AS [nit], 
+      [V_generalCliente].[nombre_cliente] AS [nombre_cliente], 
+      [V_generalCliente].[tipo_cliente] AS [tipo_cliente]
+      FROM [dbo].[V_generalCliente] AS [V_generalCliente]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__caja__idempleado__0CBAE877" Association="dbDapIIFebrero2013Model1.Store.FK__caja__idempleado__0CBAE877">
+      <End Role="empleado" EntitySet="empleado" />
+      <End Role="caja" EntitySet="caja" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cliente__idrubro__7F60ED59" Association="dbDapIIFebrero2013Model1.Store.FK__cliente__idrubro__7F60ED59">
+      <End Role="rubro" EntitySet="rubro" />
+      <End Role="cliente" EntitySet="cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__credito__idpedid__31EC6D26" Association="dbDapIIFebrero2013Model1.Store.FK__credito__idpedid__31EC6D26">
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+      <End Role="credito" EntitySet="credito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cuota__idcredito__34C8D9D1" Association="dbDapIIFebrero2013Model1.Store.FK__cuota__idcredito__34C8D9D1">
+      <End Role="credito" EntitySet="credito" />
+      <End Role="cuota" EntitySet="cuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalle_p__idped__3B75D760" Association="dbDapIIFebrero2013Model1.Store.FK__detalle_p__idped__3B75D760">
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+      <End Role="detalle_pedido" EntitySet="detalle_pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalle_p__idpro__3C69FB99" Association="dbDapIIFebrero2013Model1.Store.FK__detalle_p__idpro__3C69FB99">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="detalle_pedido" EntitySet="detalle_pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empleado__idcarg__09DE7BCC" Association="dbDapIIFebrero2013Model1.Store.FK__empleado__idcarg__09DE7BCC">
+      <End Role="cargo" EntitySet="cargo" />
+      <End Role="empleado" EntitySet="empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__juridico__idclie__023D5A04" Association="dbDapIIFebrero2013Model1.Store.FK__juridico__idclie__023D5A04">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="juridico" EntitySet="juridico" />
+    </AssociationSet>
+    <AssociationSet Name="FK__natural__idclien__0519C6AF" Association="dbDapIIFebrero2013Model1.Store.FK__natural__idclien__0519C6AF">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="natural" EntitySet="natural" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pedido_cl__idcli__2B3F6F97" Association="dbDapIIFebrero2013Model1.Store.FK__pedido_cl__idcli__2B3F6F97">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pedido_cl__idpro__2C3393D0" Association="dbDapIIFebrero2013Model1.Store.FK__pedido_cl__idpro__2C3393D0">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__producto__idsubc__1BFD2C07" Association="dbDapIIFebrero2013Model1.Store.FK__producto__idsubc__1BFD2C07">
+      <End Role="subcategoria" EntitySet="subcategoria" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__subcatego__idcat__1920BF5C" Association="dbDapIIFebrero2013Model1.Store.FK__subcatego__idcat__1920BF5C">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="subcategoria" EntitySet="subcategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__transacci__idcaj__0F975522" Association="dbDapIIFebrero2013Model1.Store.FK__transacci__idcaj__0F975522">
+      <End Role="caja" EntitySet="caja" />
+      <End Role="transaccion" EntitySet="transaccion" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="caja">
+    <Key>
+      <PropertyRef Name="idcaja" />
+    </Key>
+    <Property Name="idcaja" Type="bigint" Nullable="false" />
+    <Property Name="nombre_caja" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="fecha_apertura" Type="datetime" Nullable="false" />
+    <Property Name="fecha_cierre" Type="datetime" Nullable="false" />
+    <Property Name="idempleado" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cargo">
+    <Key>
+      <PropertyRef Name="idcargo" />
+    </Key>
+    <Property Name="idcargo" Type="bigint" Nullable="false" />
+    <Property Name="nombre_cargo" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="90" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idcategoria" Type="bigint" Nullable="false" />
+    <Property Name="nombre_categoria" Type="varchar" MaxLength="90" />
+    <Property Name="descripcion" Type="varchar" MaxLength="90" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="idcliente" />
+    </Key>
+    <Property Name="idcliente" Type="bigint" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="telefono" Type="bigint" />
+    <Property Name="nit" Type="bigint" />
+    <Property Name="idrubro" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="credito">
+    <Key>
+      <PropertyRef Name="idcredito" />
+    </Key>
+    <Property Name="idcredito" Type="bigint" Nullable="false" />
+    <Property Name="monto" Type="float" Nullable="false" />
+    <Property Name="fecha_desembolso" Type="datetime" Nullable="false" />
+    <Property Name="interes_mensual" Type="float" Nullable="false" />
+    <Property Name="plazo_meses" Type="tinyint" Nullable="false" />
+    <Property Name="idpedido_cliente" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cuota">
+    <Key>
+      <PropertyRef Name="idcuota" />
+    </Key>
+    <Property Name="idcuota" Type="bigint" Nullable="false" />
+    <Property Name="monto_capital" Type="float" Nullable="false" />
+    <Property Name="monto_interes" Type="float" Nullable="false" />
+    <Property Name="total_cuota" Type="float" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="fecha_pagoprogramada" Type="datetime" Nullable="false" />
+    <Property Name="fecha_pago_total" Type="datetime" />
+    <Property Name="idcredito" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="detalle_pedido">
+    <Key>
+      <PropertyRef Name="idpedido_cliente" />
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idpedido_cliente" Type="bigint" Nullable="false" />
+    <Property Name="idproducto" Type="bigint" Nullable="false" />
+    <Property Name="cantidad" Type="float" Nullable="false" />
+    <Property Name="precio" Type="float" Nullable="false" />
+    <Property Name="subtotal" Type="float" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="empleado">
+    <Key>
+      <PropertyRef Name="idempleado" />
+    </Key>
+    <Property Name="idempleado" Type="bigint" Nullable="false" />
+    <Property Name="nombre_empleado" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="app" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="apm" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="idcargo" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="juridico">
+    <Key>
+      <PropertyRef Name="idcliente" />
+    </Key>
+    <Property Name="idcliente" Type="bigint" Nullable="false" />
+    <Property Name="Razon_social" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="Rte_legal" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="Nro_padron" Type="bigint" />
+  </EntityType>
+  <EntityType Name="natural">
+    <Key>
+      <PropertyRef Name="idcliente" />
+    </Key>
+    <Property Name="idcliente" Type="bigint" Nullable="false" />
+    <Property Name="nombre_cliente" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="app" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="apm" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="fecha_nacimiento" Type="datetime" />
+  </EntityType>
+  <EntityType Name="pedido_cliente">
+    <Key>
+      <PropertyRef Name="idpedido_cliente" />
+    </Key>
+    <Property Name="idpedido_cliente" Type="bigint" Nullable="false" />
+    <Property Name="fecha_pedido" Type="datetime" Nullable="false" />
+    <Property Name="estado_pedido" Type="bigint" Nullable="false" />
+    <Property Name="total_pedido" Type="float" />
+    <Property Name="idcliente" Type="bigint" Nullable="false" />
+    <Property Name="idproducto" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idproducto" Type="bigint" Nullable="false" />
+    <Property Name="nombre_producto" Type="varchar" MaxLength="90" />
+    <Property Name="precio_venta" Type="float" Nullable="false" />
+    <Property Name="stock" Type="float" Nullable="false" />
+    <Property Name="idsubcategoria" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rubro">
+    <Key>
+      <PropertyRef Name="idrubro" />
+    </Key>
+    <Property Name="idrubro" Type="bigint" Nullable="false" />
+    <Property Name="nombre_rubro" Type="varchar" Nullable="false" MaxLength="90" />
+  </EntityType>
+  <EntityType Name="subcategoria">
+    <Key>
+      <PropertyRef Name="idsubcategoria" />
+    </Key>
+    <Property Name="idsubcategoria" Type="bigint" Nullable="false" />
+    <Property Name="nombre_subcategoria" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="idcategoria" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="transaccion">
+    <Key>
+      <PropertyRef Name="idtransacccion" />
+    </Key>
+    <Property Name="idtransacccion" Type="bigint" Nullable="false" />
+    <Property Name="monto" Type="bigint" Nullable="false" />
+    <Property Name="fecha_hora" Type="datetime" />
+    <Property Name="idcaja" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'dbDapIIFebrero2013.dbo.v_ClienteNatural' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="v_ClienteNatural">
+    <Key>
+      <PropertyRef Name="idrubro" />
+      <PropertyRef Name="nombre_rubro" />
+      <PropertyRef Name="idcliente" />
+      <PropertyRef Name="direccion" />
+      <PropertyRef Name="nombre_cliente" />
+      <PropertyRef Name="app" />
+      <PropertyRef Name="apm" />
+    </Key>
+    <Property Name="idrubro" Type="bigint" Nullable="false" />
+    <Property Name="nombre_rubro" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="idcliente" Type="bigint" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="telefono" Type="bigint" />
+    <Property Name="nit" Type="bigint" />
+    <Property Name="nombre_cliente" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="app" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="apm" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="fecha_nacimiento" Type="datetime" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'dbDapIIFebrero2013.dbo.V_generalCliente' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="V_generalCliente">
+    <Key>
+      <PropertyRef Name="idrubro" />
+      <PropertyRef Name="nombre_rubro" />
+      <PropertyRef Name="idcliente" />
+      <PropertyRef Name="direccion" />
+      <PropertyRef Name="nombre_cliente" />
+      <PropertyRef Name="tipo_cliente" />
+    </Key>
+    <Property Name="idrubro" Type="bigint" Nullable="false" />
+    <Property Name="nombre_rubro" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="idcliente" Type="bigint" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="90" />
+    <Property Name="telefono" Type="bigint" />
+    <Property Name="nit" Type="bigint" />
+    <Property Name="nombre_cliente" Type="varchar" Nullable="false" MaxLength="272" />
+    <Property Name="tipo_cliente" Type="varchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <Association Name="FK__caja__idempleado__0CBAE877">
+    <End Role="empleado" Type="dbDapIIFebrero2013Model1.Store.empleado" Multiplicity="1" />
+    <End Role="caja" Type="dbDapIIFebrero2013Model1.Store.caja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empleado">
+        <PropertyRef Name="idempleado" />
+      </Principal>
+      <Dependent Role="caja">
+        <PropertyRef Name="idempleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cliente__idrubro__7F60ED59">
+    <End Role="rubro" Type="dbDapIIFebrero2013Model1.Store.rubro" Multiplicity="1" />
+    <End Role="cliente" Type="dbDapIIFebrero2013Model1.Store.cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rubro">
+        <PropertyRef Name="idrubro" />
+      </Principal>
+      <Dependent Role="cliente">
+        <PropertyRef Name="idrubro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__credito__idpedid__31EC6D26">
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model1.Store.pedido_cliente" Multiplicity="1" />
+    <End Role="credito" Type="dbDapIIFebrero2013Model1.Store.credito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido_cliente">
+        <PropertyRef Name="idpedido_cliente" />
+      </Principal>
+      <Dependent Role="credito">
+        <PropertyRef Name="idpedido_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cuota__idcredito__34C8D9D1">
+    <End Role="credito" Type="dbDapIIFebrero2013Model1.Store.credito" Multiplicity="1" />
+    <End Role="cuota" Type="dbDapIIFebrero2013Model1.Store.cuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="credito">
+        <PropertyRef Name="idcredito" />
+      </Principal>
+      <Dependent Role="cuota">
+        <PropertyRef Name="idcredito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalle_p__idped__3B75D760">
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model1.Store.pedido_cliente" Multiplicity="1" />
+    <End Role="detalle_pedido" Type="dbDapIIFebrero2013Model1.Store.detalle_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido_cliente">
+        <PropertyRef Name="idpedido_cliente" />
+      </Principal>
+      <Dependent Role="detalle_pedido">
+        <PropertyRef Name="idpedido_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalle_p__idpro__3C69FB99">
+    <End Role="producto" Type="dbDapIIFebrero2013Model1.Store.producto" Multiplicity="1" />
+    <End Role="detalle_pedido" Type="dbDapIIFebrero2013Model1.Store.detalle_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="detalle_pedido">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empleado__idcarg__09DE7BCC">
+    <End Role="cargo" Type="dbDapIIFebrero2013Model1.Store.cargo" Multiplicity="1" />
+    <End Role="empleado" Type="dbDapIIFebrero2013Model1.Store.empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cargo">
+        <PropertyRef Name="idcargo" />
+      </Principal>
+      <Dependent Role="empleado">
+        <PropertyRef Name="idcargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__juridico__idclie__023D5A04">
+    <End Role="cliente" Type="dbDapIIFebrero2013Model1.Store.cliente" Multiplicity="1" />
+    <End Role="juridico" Type="dbDapIIFebrero2013Model1.Store.juridico" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="idcliente" />
+      </Principal>
+      <Dependent Role="juridico">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__natural__idclien__0519C6AF">
+    <End Role="cliente" Type="dbDapIIFebrero2013Model1.Store.cliente" Multiplicity="1" />
+    <End Role="natural" Type="dbDapIIFebrero2013Model1.Store.natural" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="idcliente" />
+      </Principal>
+      <Dependent Role="natural">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pedido_cl__idcli__2B3F6F97">
+    <End Role="cliente" Type="dbDapIIFebrero2013Model1.Store.cliente" Multiplicity="1" />
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model1.Store.pedido_cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="idcliente" />
+      </Principal>
+      <Dependent Role="pedido_cliente">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pedido_cl__idpro__2C3393D0">
+    <End Role="producto" Type="dbDapIIFebrero2013Model1.Store.producto" Multiplicity="1" />
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model1.Store.pedido_cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="pedido_cliente">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__producto__idsubc__1BFD2C07">
+    <End Role="subcategoria" Type="dbDapIIFebrero2013Model1.Store.subcategoria" Multiplicity="1" />
+    <End Role="producto" Type="dbDapIIFebrero2013Model1.Store.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcategoria">
+        <PropertyRef Name="idsubcategoria" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="idsubcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__subcatego__idcat__1920BF5C">
+    <End Role="categoria" Type="dbDapIIFebrero2013Model1.Store.categoria" Multiplicity="1" />
+    <End Role="subcategoria" Type="dbDapIIFebrero2013Model1.Store.subcategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="idcategoria" />
+      </Principal>
+      <Dependent Role="subcategoria">
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__transacci__idcaj__0F975522">
+    <End Role="caja" Type="dbDapIIFebrero2013Model1.Store.caja" Multiplicity="1" />
+    <End Role="transaccion" Type="dbDapIIFebrero2013Model1.Store.transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="caja">
+        <PropertyRef Name="idcaja" />
+      </Principal>
+      <Dependent Role="transaccion">
+        <PropertyRef Name="idcaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

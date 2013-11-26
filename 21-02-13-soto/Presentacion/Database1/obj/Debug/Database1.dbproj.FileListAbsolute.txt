@@ -1,0 +1,24 @@
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Database1\sql\debug\Database1_Database.sqlsettings
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Database1\sql\debug\Database1_Database.sqldeployment
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Database1\sql\debug\Database1_Database.sqlcmdvars
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Database1\sql\debug\Database1.deploymanifest
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Database1\sql\debug\Database1.dbschema
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Database1\obj\Debug\Database1.dbschema
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqlsettings
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqldeployment
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqlcmdvars
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1.deploymanifest
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1.dbschema
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Database1\obj\Debug\Database1.dbschema
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqlsettings
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqldeployment
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqlcmdvars
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1.deploymanifest
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Database1\sql\debug\Database1.dbschema
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Database1\obj\Debug\Database1.dbschema
+C:\Users\Willy\Desktop\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqlsettings
+C:\Users\Willy\Desktop\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqldeployment
+C:\Users\Willy\Desktop\21-02-13-soto\Presentacion\Database1\sql\debug\Database1_Database.sqlcmdvars
+C:\Users\Willy\Desktop\21-02-13-soto\Presentacion\Database1\sql\debug\Database1.deploymanifest
+C:\Users\Willy\Desktop\21-02-13-soto\Presentacion\Database1\sql\debug\Database1.dbschema
+C:\Users\Willy\Desktop\21-02-13-soto\Presentacion\Database1\obj\Debug\Database1.dbschema

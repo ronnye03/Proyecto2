@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDapIIFebrero2013Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="dbDapIIFebrero2013Entities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="caja" EntityType="dbDapIIFebrero2013Model.caja" />
+    <EntitySet Name="cargo" EntityType="dbDapIIFebrero2013Model.cargo" />
+    <EntitySet Name="categoria" EntityType="dbDapIIFebrero2013Model.categoria" />
+    <EntitySet Name="cliente" EntityType="dbDapIIFebrero2013Model.cliente" />
+    <EntitySet Name="credito" EntityType="dbDapIIFebrero2013Model.credito" />
+    <EntitySet Name="cuota" EntityType="dbDapIIFebrero2013Model.cuota" />
+    <EntitySet Name="detalle_pedido" EntityType="dbDapIIFebrero2013Model.detalle_pedido" />
+    <EntitySet Name="empleado" EntityType="dbDapIIFebrero2013Model.empleado" />
+    <EntitySet Name="juridico" EntityType="dbDapIIFebrero2013Model.juridico" />
+    <EntitySet Name="natural" EntityType="dbDapIIFebrero2013Model.natural" />
+    <EntitySet Name="pedido_cliente" EntityType="dbDapIIFebrero2013Model.pedido_cliente" />
+    <EntitySet Name="producto" EntityType="dbDapIIFebrero2013Model.producto" />
+    <EntitySet Name="rubro" EntityType="dbDapIIFebrero2013Model.rubro" />
+    <EntitySet Name="subcategoria" EntityType="dbDapIIFebrero2013Model.subcategoria" />
+    <EntitySet Name="transaccion" EntityType="dbDapIIFebrero2013Model.transaccion" />
+    <EntitySet Name="v_ClienteNatural" EntityType="dbDapIIFebrero2013Model.v_ClienteNatural" />
+    <EntitySet Name="V_generalCliente" EntityType="dbDapIIFebrero2013Model.V_generalCliente" />
+    <AssociationSet Name="FK__caja__idempleado__0CBAE877" Association="dbDapIIFebrero2013Model.FK__caja__idempleado__0CBAE877">
+      <End Role="empleado" EntitySet="empleado" />
+      <End Role="caja" EntitySet="caja" />
+    </AssociationSet>
+    <AssociationSet Name="FK__transacci__idcaj__0F975522" Association="dbDapIIFebrero2013Model.FK__transacci__idcaj__0F975522">
+      <End Role="caja" EntitySet="caja" />
+      <End Role="transaccion" EntitySet="transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empleado__idcarg__09DE7BCC" Association="dbDapIIFebrero2013Model.FK__empleado__idcarg__09DE7BCC">
+      <End Role="cargo" EntitySet="cargo" />
+      <End Role="empleado" EntitySet="empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__subcatego__idcat__1920BF5C" Association="dbDapIIFebrero2013Model.FK__subcatego__idcat__1920BF5C">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="subcategoria" EntitySet="subcategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cliente__idrubro__7F60ED59" Association="dbDapIIFebrero2013Model.FK__cliente__idrubro__7F60ED59">
+      <End Role="rubro" EntitySet="rubro" />
+      <End Role="cliente" EntitySet="cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__juridico__idclie__023D5A04" Association="dbDapIIFebrero2013Model.FK__juridico__idclie__023D5A04">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="juridico" EntitySet="juridico" />
+    </AssociationSet>
+    <AssociationSet Name="FK__natural__idclien__0519C6AF" Association="dbDapIIFebrero2013Model.FK__natural__idclien__0519C6AF">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="natural" EntitySet="natural" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pedido_cl__idcli__2B3F6F97" Association="dbDapIIFebrero2013Model.FK__pedido_cl__idcli__2B3F6F97">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__credito__idpedid__31EC6D26" Association="dbDapIIFebrero2013Model.FK__credito__idpedid__31EC6D26">
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+      <End Role="credito" EntitySet="credito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cuota__idcredito__34C8D9D1" Association="dbDapIIFebrero2013Model.FK__cuota__idcredito__34C8D9D1">
+      <End Role="credito" EntitySet="credito" />
+      <End Role="cuota" EntitySet="cuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalle_p__idped__3B75D760" Association="dbDapIIFebrero2013Model.FK__detalle_p__idped__3B75D760">
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+      <End Role="detalle_pedido" EntitySet="detalle_pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalle_p__idpro__3C69FB99" Association="dbDapIIFebrero2013Model.FK__detalle_p__idpro__3C69FB99">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="detalle_pedido" EntitySet="detalle_pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pedido_cl__idpro__2C3393D0" Association="dbDapIIFebrero2013Model.FK__pedido_cl__idpro__2C3393D0">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="pedido_cliente" EntitySet="pedido_cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__producto__idsubc__1BFD2C07" Association="dbDapIIFebrero2013Model.FK__producto__idsubc__1BFD2C07">
+      <End Role="subcategoria" EntitySet="subcategoria" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="caja">
+    <Key>
+      <PropertyRef Name="idcaja" />
+    </Key>
+    <Property Name="idcaja" Type="Int64" Nullable="false" />
+    <Property Name="nombre_caja" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="fecha_apertura" Type="DateTime" Nullable="false" />
+    <Property Name="fecha_cierre" Type="DateTime" Nullable="false" />
+    <Property Name="idempleado" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="empleado" Relationship="dbDapIIFebrero2013Model.FK__caja__idempleado__0CBAE877" FromRole="caja" ToRole="empleado" />
+    <NavigationProperty Name="transaccion" Relationship="dbDapIIFebrero2013Model.FK__transacci__idcaj__0F975522" FromRole="caja" ToRole="transaccion" />
+  </EntityType>
+  <EntityType Name="cargo">
+    <Key>
+      <PropertyRef Name="idcargo" />
+    </Key>
+    <Property Name="idcargo" Type="Int64" Nullable="false" />
+    <Property Name="nombre_cargo" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="empleado" Relationship="dbDapIIFebrero2013Model.FK__empleado__idcarg__09DE7BCC" FromRole="cargo" ToRole="empleado" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idcategoria" Type="Int64" Nullable="false" />
+    <Property Name="nombre_categoria" Type="String" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" MaxLength="90" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="subcategoria" Relationship="dbDapIIFebrero2013Model.FK__subcatego__idcat__1920BF5C" FromRole="categoria" ToRole="subcategoria" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="idcliente" />
+    </Key>
+    <Property Name="idcliente" Type="Int64" Nullable="false" />
+    <Property Name="direccion" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="telefono" Type="Int64" />
+    <Property Name="nit" Type="Int64" />
+    <Property Name="idrubro" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="rubro" Relationship="dbDapIIFebrero2013Model.FK__cliente__idrubro__7F60ED59" FromRole="cliente" ToRole="rubro" />
+    <NavigationProperty Name="juridico" Relationship="dbDapIIFebrero2013Model.FK__juridico__idclie__023D5A04" FromRole="cliente" ToRole="juridico" />
+    <NavigationProperty Name="natural" Relationship="dbDapIIFebrero2013Model.FK__natural__idclien__0519C6AF" FromRole="cliente" ToRole="natural" />
+    <NavigationProperty Name="pedido_cliente" Relationship="dbDapIIFebrero2013Model.FK__pedido_cl__idcli__2B3F6F97" FromRole="cliente" ToRole="pedido_cliente" />
+  </EntityType>
+  <EntityType Name="credito">
+    <Key>
+      <PropertyRef Name="idcredito" />
+    </Key>
+    <Property Name="idcredito" Type="Int64" Nullable="false" />
+    <Property Name="monto" Type="Double" Nullable="false" />
+    <Property Name="fecha_desembolso" Type="DateTime" Nullable="false" />
+    <Property Name="interes_mensual" Type="Double" Nullable="false" />
+    <Property Name="plazo_meses" Type="Byte" Nullable="false" />
+    <Property Name="idpedido_cliente" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="pedido_cliente" Relationship="dbDapIIFebrero2013Model.FK__credito__idpedid__31EC6D26" FromRole="credito" ToRole="pedido_cliente" />
+    <NavigationProperty Name="cuota" Relationship="dbDapIIFebrero2013Model.FK__cuota__idcredito__34C8D9D1" FromRole="credito" ToRole="cuota" />
+  </EntityType>
+  <EntityType Name="cuota">
+    <Key>
+      <PropertyRef Name="idcuota" />
+    </Key>
+    <Property Name="idcuota" Type="Int64" Nullable="false" />
+    <Property Name="monto_capital" Type="Double" Nullable="false" />
+    <Property Name="monto_interes" Type="Double" Nullable="false" />
+    <Property Name="total_cuota" Type="Double" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="fecha_pagoprogramada" Type="DateTime" Nullable="false" />
+    <Property Name="fecha_pago_total" Type="DateTime" />
+    <Property Name="idcredito" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="credito" Relationship="dbDapIIFebrero2013Model.FK__cuota__idcredito__34C8D9D1" FromRole="cuota" ToRole="credito" />
+  </EntityType>
+  <EntityType Name="detalle_pedido">
+    <Key>
+      <PropertyRef Name="idpedido_cliente" />
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idpedido_cliente" Type="Int64" Nullable="false" />
+    <Property Name="idproducto" Type="Int64" Nullable="false" />
+    <Property Name="cantidad" Type="Double" Nullable="false" />
+    <Property Name="precio" Type="Double" Nullable="false" />
+    <Property Name="subtotal" Type="Double" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="pedido_cliente" Relationship="dbDapIIFebrero2013Model.FK__detalle_p__idped__3B75D760" FromRole="detalle_pedido" ToRole="pedido_cliente" />
+    <NavigationProperty Name="producto" Relationship="dbDapIIFebrero2013Model.FK__detalle_p__idpro__3C69FB99" FromRole="detalle_pedido" ToRole="producto" />
+  </EntityType>
+  <EntityType Name="empleado">
+    <Key>
+      <PropertyRef Name="idempleado" />
+    </Key>
+    <Property Name="idempleado" Type="Int64" Nullable="false" />
+    <Property Name="nombre_empleado" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="app" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="apm" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="idcargo" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="caja" Relationship="dbDapIIFebrero2013Model.FK__caja__idempleado__0CBAE877" FromRole="empleado" ToRole="caja" />
+    <NavigationProperty Name="cargo" Relationship="dbDapIIFebrero2013Model.FK__empleado__idcarg__09DE7BCC" FromRole="empleado" ToRole="cargo" />
+  </EntityType>
+  <EntityType Name="juridico">
+    <Key>
+      <PropertyRef Name="idcliente" />
+    </Key>
+    <Property Name="idcliente" Type="Int64" Nullable="false" />
+    <Property Name="Razon_social" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="Rte_legal" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="Nro_padron" Type="Int64" />
+    <NavigationProperty Name="cliente" Relationship="dbDapIIFebrero2013Model.FK__juridico__idclie__023D5A04" FromRole="juridico" ToRole="cliente" />
+  </EntityType>
+  <EntityType Name="natural">
+    <Key>
+      <PropertyRef Name="idcliente" />
+    </Key>
+    <Property Name="idcliente" Type="Int64" Nullable="false" />
+    <Property Name="nombre_cliente" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="app" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="apm" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" />
+    <NavigationProperty Name="cliente" Relationship="dbDapIIFebrero2013Model.FK__natural__idclien__0519C6AF" FromRole="natural" ToRole="cliente" />
+  </EntityType>
+  <EntityType Name="pedido_cliente">
+    <Key>
+      <PropertyRef Name="idpedido_cliente" />
+    </Key>
+    <Property Name="idpedido_cliente" Type="Int64" Nullable="false" />
+    <Property Name="fecha_pedido" Type="DateTime" Nullable="false" />
+    <Property Name="estado_pedido" Type="Int64" Nullable="false" />
+    <Property Name="total_pedido" Type="Double" />
+    <Property Name="idcliente" Type="Int64" Nullable="false" />
+    <Property Name="idproducto" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="cliente" Relationship="dbDapIIFebrero2013Model.FK__pedido_cl__idcli__2B3F6F97" FromRole="pedido_cliente" ToRole="cliente" />
+    <NavigationProperty Name="credito" Relationship="dbDapIIFebrero2013Model.FK__credito__idpedid__31EC6D26" FromRole="pedido_cliente" ToRole="credito" />
+    <NavigationProperty Name="detalle_pedido" Relationship="dbDapIIFebrero2013Model.FK__detalle_p__idped__3B75D760" FromRole="pedido_cliente" ToRole="detalle_pedido" />
+    <NavigationProperty Name="producto" Relationship="dbDapIIFebrero2013Model.FK__pedido_cl__idpro__2C3393D0" FromRole="pedido_cliente" ToRole="producto" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idproducto" Type="Int64" Nullable="false" />
+    <Property Name="nombre_producto" Type="String" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="precio_venta" Type="Double" Nullable="false" />
+    <Property Name="stock" Type="Double" Nullable="false" />
+    <Property Name="idsubcategoria" Type="Int64" Nullable="false" />
+    <Property Name="Nombre_imagen" Type="String" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="img1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="extension" Type="String" MaxLength="90" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="detalle_pedido" Relationship="dbDapIIFebrero2013Model.FK__detalle_p__idpro__3C69FB99" FromRole="producto" ToRole="detalle_pedido" />
+    <NavigationProperty Name="pedido_cliente" Relationship="dbDapIIFebrero2013Model.FK__pedido_cl__idpro__2C3393D0" FromRole="producto" ToRole="pedido_cliente" />
+    <NavigationProperty Name="subcategoria" Relationship="dbDapIIFebrero2013Model.FK__producto__idsubc__1BFD2C07" FromRole="producto" ToRole="subcategoria" />
+  </EntityType>
+  <EntityType Name="rubro">
+    <Key>
+      <PropertyRef Name="idrubro" />
+    </Key>
+    <Property Name="idrubro" Type="Int64" Nullable="false" />
+    <Property Name="nombre_rubro" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="cliente" Relationship="dbDapIIFebrero2013Model.FK__cliente__idrubro__7F60ED59" FromRole="rubro" ToRole="cliente" />
+  </EntityType>
+  <EntityType Name="subcategoria">
+    <Key>
+      <PropertyRef Name="idsubcategoria" />
+    </Key>
+    <Property Name="idsubcategoria" Type="Int64" Nullable="false" />
+    <Property Name="nombre_subcategoria" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="idcategoria" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="categoria" Relationship="dbDapIIFebrero2013Model.FK__subcatego__idcat__1920BF5C" FromRole="subcategoria" ToRole="categoria" />
+    <NavigationProperty Name="producto" Relationship="dbDapIIFebrero2013Model.FK__producto__idsubc__1BFD2C07" FromRole="subcategoria" ToRole="producto" />
+  </EntityType>
+  <EntityType Name="transaccion">
+    <Key>
+      <PropertyRef Name="idtransacccion" />
+    </Key>
+    <Property Name="idtransacccion" Type="Int64" Nullable="false" />
+    <Property Name="monto" Type="Int64" Nullable="false" />
+    <Property Name="fecha_hora" Type="DateTime" />
+    <Property Name="idcaja" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="caja" Relationship="dbDapIIFebrero2013Model.FK__transacci__idcaj__0F975522" FromRole="transaccion" ToRole="caja" />
+  </EntityType>
+  <EntityType Name="v_ClienteNatural">
+    <Key>
+      <PropertyRef Name="idrubro" />
+      <PropertyRef Name="nombre_rubro" />
+      <PropertyRef Name="idcliente" />
+      <PropertyRef Name="direccion" />
+      <PropertyRef Name="nombre_cliente" />
+      <PropertyRef Name="app" />
+      <PropertyRef Name="apm" />
+    </Key>
+    <Property Name="idrubro" Type="Int64" Nullable="false" />
+    <Property Name="nombre_rubro" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="idcliente" Type="Int64" Nullable="false" />
+    <Property Name="direccion" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="telefono" Type="Int64" />
+    <Property Name="nit" Type="Int64" />
+    <Property Name="nombre_cliente" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="app" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="apm" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="V_generalCliente">
+    <Key>
+      <PropertyRef Name="idrubro" />
+      <PropertyRef Name="nombre_rubro" />
+      <PropertyRef Name="idcliente" />
+      <PropertyRef Name="direccion" />
+      <PropertyRef Name="nombre_cliente" />
+      <PropertyRef Name="tipo_cliente" />
+    </Key>
+    <Property Name="idrubro" Type="Int64" Nullable="false" />
+    <Property Name="nombre_rubro" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="idcliente" Type="Int64" Nullable="false" />
+    <Property Name="direccion" Type="String" Nullable="false" MaxLength="90" Unicode="false" FixedLength="false" />
+    <Property Name="telefono" Type="Int64" />
+    <Property Name="nit" Type="Int64" />
+    <Property Name="nombre_cliente" Type="String" Nullable="false" MaxLength="272" Unicode="false" FixedLength="false" />
+    <Property Name="tipo_cliente" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__caja__idempleado__0CBAE877">
+    <End Role="empleado" Type="dbDapIIFebrero2013Model.empleado" Multiplicity="1" />
+    <End Role="caja" Type="dbDapIIFebrero2013Model.caja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empleado">
+        <PropertyRef Name="idempleado" />
+      </Principal>
+      <Dependent Role="caja">
+        <PropertyRef Name="idempleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__transacci__idcaj__0F975522">
+    <End Role="caja" Type="dbDapIIFebrero2013Model.caja" Multiplicity="1" />
+    <End Role="transaccion" Type="dbDapIIFebrero2013Model.transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="caja">
+        <PropertyRef Name="idcaja" />
+      </Principal>
+      <Dependent Role="transaccion">
+        <PropertyRef Name="idcaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empleado__idcarg__09DE7BCC">
+    <End Role="cargo" Type="dbDapIIFebrero2013Model.cargo" Multiplicity="1" />
+    <End Role="empleado" Type="dbDapIIFebrero2013Model.empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cargo">
+        <PropertyRef Name="idcargo" />
+      </Principal>
+      <Dependent Role="empleado">
+        <PropertyRef Name="idcargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__subcatego__idcat__1920BF5C">
+    <End Role="categoria" Type="dbDapIIFebrero2013Model.categoria" Multiplicity="1" />
+    <End Role="subcategoria" Type="dbDapIIFebrero2013Model.subcategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="idcategoria" />
+      </Principal>
+      <Dependent Role="subcategoria">
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cliente__idrubro__7F60ED59">
+    <End Role="rubro" Type="dbDapIIFebrero2013Model.rubro" Multiplicity="1" />
+    <End Role="cliente" Type="dbDapIIFebrero2013Model.cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rubro">
+        <PropertyRef Name="idrubro" />
+      </Principal>
+      <Dependent Role="cliente">
+        <PropertyRef Name="idrubro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__juridico__idclie__023D5A04">
+    <End Role="cliente" Type="dbDapIIFebrero2013Model.cliente" Multiplicity="1" />
+    <End Role="juridico" Type="dbDapIIFebrero2013Model.juridico" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="idcliente" />
+      </Principal>
+      <Dependent Role="juridico">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__natural__idclien__0519C6AF">
+    <End Role="cliente" Type="dbDapIIFebrero2013Model.cliente" Multiplicity="1" />
+    <End Role="natural" Type="dbDapIIFebrero2013Model.natural" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="idcliente" />
+      </Principal>
+      <Dependent Role="natural">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pedido_cl__idcli__2B3F6F97">
+    <End Role="cliente" Type="dbDapIIFebrero2013Model.cliente" Multiplicity="1" />
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model.pedido_cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="idcliente" />
+      </Principal>
+      <Dependent Role="pedido_cliente">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__credito__idpedid__31EC6D26">
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model.pedido_cliente" Multiplicity="1" />
+    <End Role="credito" Type="dbDapIIFebrero2013Model.credito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido_cliente">
+        <PropertyRef Name="idpedido_cliente" />
+      </Principal>
+      <Dependent Role="credito">
+        <PropertyRef Name="idpedido_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cuota__idcredito__34C8D9D1">
+    <End Role="credito" Type="dbDapIIFebrero2013Model.credito" Multiplicity="1" />
+    <End Role="cuota" Type="dbDapIIFebrero2013Model.cuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="credito">
+        <PropertyRef Name="idcredito" />
+      </Principal>
+      <Dependent Role="cuota">
+        <PropertyRef Name="idcredito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalle_p__idped__3B75D760">
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model.pedido_cliente" Multiplicity="1" />
+    <End Role="detalle_pedido" Type="dbDapIIFebrero2013Model.detalle_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido_cliente">
+        <PropertyRef Name="idpedido_cliente" />
+      </Principal>
+      <Dependent Role="detalle_pedido">
+        <PropertyRef Name="idpedido_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalle_p__idpro__3C69FB99">
+    <End Role="producto" Type="dbDapIIFebrero2013Model.producto" Multiplicity="1" />
+    <End Role="detalle_pedido" Type="dbDapIIFebrero2013Model.detalle_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="detalle_pedido">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pedido_cl__idpro__2C3393D0">
+    <End Role="producto" Type="dbDapIIFebrero2013Model.producto" Multiplicity="1" />
+    <End Role="pedido_cliente" Type="dbDapIIFebrero2013Model.pedido_cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="pedido_cliente">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__producto__idsubc__1BFD2C07">
+    <End Role="subcategoria" Type="dbDapIIFebrero2013Model.subcategoria" Multiplicity="1" />
+    <End Role="producto" Type="dbDapIIFebrero2013Model.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcategoria">
+        <PropertyRef Name="idsubcategoria" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="idsubcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

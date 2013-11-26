@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbDapIIFebrero2013Model1StoreContainer" CdmEntityContainer="dbDapIIFebrero2013Entities3">
+    <EntitySetMapping Name="caja">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.caja">
+        <MappingFragment StoreEntitySet="caja">
+          <ScalarProperty Name="idcaja" ColumnName="idcaja" />
+          <ScalarProperty Name="nombre_caja" ColumnName="nombre_caja" />
+          <ScalarProperty Name="fecha_apertura" ColumnName="fecha_apertura" />
+          <ScalarProperty Name="fecha_cierre" ColumnName="fecha_cierre" />
+          <ScalarProperty Name="idempleado" ColumnName="idempleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cargo">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.cargo">
+        <MappingFragment StoreEntitySet="cargo">
+          <ScalarProperty Name="idcargo" ColumnName="idcargo" />
+          <ScalarProperty Name="nombre_cargo" ColumnName="nombre_cargo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categoria">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.categoria">
+        <MappingFragment StoreEntitySet="categoria">
+          <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+          <ScalarProperty Name="nombre_categoria" ColumnName="nombre_categoria" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cliente">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="idrubro" ColumnName="idrubro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="credito">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.credito">
+        <MappingFragment StoreEntitySet="credito">
+          <ScalarProperty Name="idcredito" ColumnName="idcredito" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="fecha_desembolso" ColumnName="fecha_desembolso" />
+          <ScalarProperty Name="interes_mensual" ColumnName="interes_mensual" />
+          <ScalarProperty Name="plazo_meses" ColumnName="plazo_meses" />
+          <ScalarProperty Name="idpedido_cliente" ColumnName="idpedido_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cuota">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.cuota">
+        <MappingFragment StoreEntitySet="cuota">
+          <ScalarProperty Name="idcuota" ColumnName="idcuota" />
+          <ScalarProperty Name="monto_capital" ColumnName="monto_capital" />
+          <ScalarProperty Name="monto_interes" ColumnName="monto_interes" />
+          <ScalarProperty Name="total_cuota" ColumnName="total_cuota" />
+          <ScalarProperty Name="fecha_pagoprogramada" ColumnName="fecha_pagoprogramada" />
+          <ScalarProperty Name="fecha_pago_total" ColumnName="fecha_pago_total" />
+          <ScalarProperty Name="idcredito" ColumnName="idcredito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detalle_pedido">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.detalle_pedido">
+        <MappingFragment StoreEntitySet="detalle_pedido">
+          <ScalarProperty Name="idpedido_cliente" ColumnName="idpedido_cliente" />
+          <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empleado">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.empleado">
+        <MappingFragment StoreEntitySet="empleado">
+          <ScalarProperty Name="idempleado" ColumnName="idempleado" />
+          <ScalarProperty Name="nombre_empleado" ColumnName="nombre_empleado" />
+          <ScalarProperty Name="app" ColumnName="app" />
+          <ScalarProperty Name="apm" ColumnName="apm" />
+          <ScalarProperty Name="idcargo" ColumnName="idcargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="juridico">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.juridico">
+        <MappingFragment StoreEntitySet="juridico">
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="Razon_social" ColumnName="Razon_social" />
+          <ScalarProperty Name="Rte_legal" ColumnName="Rte_legal" />
+          <ScalarProperty Name="Nro_padron" ColumnName="Nro_padron" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="natural">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.natural">
+        <MappingFragment StoreEntitySet="natural">
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
+          <ScalarProperty Name="app" ColumnName="app" />
+          <ScalarProperty Name="apm" ColumnName="apm" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedido_cliente">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.pedido_cliente">
+        <MappingFragment StoreEntitySet="pedido_cliente">
+          <ScalarProperty Name="idpedido_cliente" ColumnName="idpedido_cliente" />
+          <ScalarProperty Name="fecha_pedido" ColumnName="fecha_pedido" />
+          <ScalarProperty Name="estado_pedido" ColumnName="estado_pedido" />
+          <ScalarProperty Name="total_pedido" ColumnName="total_pedido" />
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="producto">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.producto">
+        <MappingFragment StoreEntitySet="producto">
+          <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+          <ScalarProperty Name="nombre_producto" ColumnName="nombre_producto" />
+          <ScalarProperty Name="precio_venta" ColumnName="precio_venta" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="idsubcategoria" ColumnName="idsubcategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rubro">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.rubro">
+        <MappingFragment StoreEntitySet="rubro">
+          <ScalarProperty Name="idrubro" ColumnName="idrubro" />
+          <ScalarProperty Name="nombre_rubro" ColumnName="nombre_rubro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subcategoria">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.subcategoria">
+        <MappingFragment StoreEntitySet="subcategoria">
+          <ScalarProperty Name="idsubcategoria" ColumnName="idsubcategoria" />
+          <ScalarProperty Name="nombre_subcategoria" ColumnName="nombre_subcategoria" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transaccion">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.transaccion">
+        <MappingFragment StoreEntitySet="transaccion">
+          <ScalarProperty Name="idtransacccion" ColumnName="idtransacccion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="fecha_hora" ColumnName="fecha_hora" />
+          <ScalarProperty Name="idcaja" ColumnName="idcaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_ClienteNatural">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.v_ClienteNatural">
+        <MappingFragment StoreEntitySet="v_ClienteNatural">
+          <ScalarProperty Name="idrubro" ColumnName="idrubro" />
+          <ScalarProperty Name="nombre_rubro" ColumnName="nombre_rubro" />
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
+          <ScalarProperty Name="app" ColumnName="app" />
+          <ScalarProperty Name="apm" ColumnName="apm" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_generalCliente">
+      <EntityTypeMapping TypeName="dbDapIIFebrero2013Model1.V_generalCliente">
+        <MappingFragment StoreEntitySet="V_generalCliente">
+          <ScalarProperty Name="idrubro" ColumnName="idrubro" />
+          <ScalarProperty Name="nombre_rubro" ColumnName="nombre_rubro" />
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
+          <ScalarProperty Name="tipo_cliente" ColumnName="tipo_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

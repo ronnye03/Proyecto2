@@ -1,0 +1,19 @@
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Presentacion\bin\Presentacion.dll
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Presentacion\bin\Presentacion.pdb
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Presentacion\obj\Debug\ResolveAssemblyReference.cache
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Presentacion\obj\Debug\Presentacion.dll
+D:\aplicaciones2013\dapIIFebrero2013\Presentacion\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Presentacion\bin\Presentacion.dll
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Presentacion\bin\Presentacion.pdb
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\RdlCompile.cache
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\RdlCompile.compiled
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Presentacion\bin\Presentacion.dll
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Presentacion\bin\Presentacion.pdb
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\RdlCompile.cache
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\RdlCompile.compiled
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\Willy\Documents\_BRUNO\UTEPSA\2_DAP 2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Willy\Desktop\DAP2\21-02-13-soto\Presentacion\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
